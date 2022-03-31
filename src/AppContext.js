@@ -5,8 +5,10 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [data, setData] = useState({});
   const [isDay, setIsDay] = useState(true);
+  const [moreJokes, setMoreJokes] = useState(true);
 
   const toggleIsDay = () => setIsDay((prevValue) => !prevValue);
+  const toggleMoreJokes = () => setMoreJokes((prevValue) => !prevValue);
 
   const fetchData = () => {
     const url = "http://localhost:8000/joke";
@@ -22,10 +24,10 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [moreJokes]);
 
   return (
-    <AppContext.Provider value={{ data, isDay, toggleIsDay }}>
+    <AppContext.Provider value={{ data, isDay, toggleIsDay, toggleMoreJokes }}>
       {children}
     </AppContext.Provider>
   );

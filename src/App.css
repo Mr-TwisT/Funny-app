@@ -1,0 +1,60 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.app h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 10vh;
+}
+
+.app__jokeCard {
+  width: 50vw;
+  height: 50vh;
+  background-color: cornflowerblue;
+  margin-top: 10vh;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app__jokeCard__category {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.app__jokecard__text {
+  margin: 10% auto;
+  font-size: 20px;
+  padding: auto;
+  text-align: center;
+}
+
+.app__jokeCard__button {
+  width: 94px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: antiquewhite;
+  border: 2px solid rgb(32, 110, 255);
+  border-radius: 8px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.app__jokeCard__button:hover {
+  cursor: pointer;
+  font-style: italic;
+  background-color: rgb(32, 110, 255);
+}
