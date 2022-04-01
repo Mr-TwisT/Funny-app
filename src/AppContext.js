@@ -7,7 +7,12 @@ const AppProvider = ({ children }) => {
   const [isDay, setIsDay] = useState(true);
   const [moreJokes, setMoreJokes] = useState(true);
 
-  const toggleIsDay = () => setIsDay((prevValue) => !prevValue);
+  const toggleIsDay = () => {
+    setIsDay((prevValue) => !prevValue);
+    const app = document.querySelector(".app");
+    app.classList.toggle("darkMode");
+  };
+
   const toggleMoreJokes = () => setMoreJokes((prevValue) => !prevValue);
 
   const fetchData = () => {

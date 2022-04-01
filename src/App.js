@@ -3,9 +3,8 @@ import { AppContext } from "./AppContext";
 import "./App.css";
 
 const App = () => {
-  const { data, toggleMoreJokes } = useContext(AppContext); //isDay, toggleIsDay
+  const { data, isDay, toggleIsDay, toggleMoreJokes } = useContext(AppContext);
 
-  console.log(data);
   const twopart = (
     <p>
       {data.setup} <br />
@@ -17,8 +16,14 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* <button>Pogoda</button> */}
-      <h1>You're weakly does of JokeS!</h1>
+      <button className="app__modeButton" onClick={toggleIsDay}>
+        {isDay ? (
+          <ion-icon name="sunny"></ion-icon>
+        ) : (
+          <ion-icon name="moon"></ion-icon>
+        )}
+      </button>
+      <h1>Your daily dose of JokeS!</h1>
       <div className="app__jokeCard">
         <div className="app__jokeCard__category">
           <p>

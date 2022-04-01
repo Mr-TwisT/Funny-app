@@ -6,7 +6,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #faebd7;
+}
+
+.app.darkMode{
+  background-color: #7A7369;
+  color: #fff;
 }
 
 .app h1 {
@@ -51,10 +56,39 @@
   align-self: flex-end;
   margin-bottom: 10px;
   margin-right: 15px;
+  transition: all 0.35s ease;
+}
+
+.app.darkMode .app__jokeCard__button{
+  background-color: #7A7369;
+  color: #fff;
+  border-color: #7A7369;
 }
 
 .app__jokeCard__button:hover {
   cursor: pointer;
   font-style: italic;
   background-color: rgb(32, 110, 255);
+}
+
+.app__modeButton{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 30%;
+  background-color: rgb(136, 177, 255);
+}
+
+.app__modeButton:hover{
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 24px;
 }
